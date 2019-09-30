@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Student>
 @{
     ViewBag.Title = "List of Students";
+
 }
 
 <table>
@@ -23,11 +24,41 @@
                 <td>@s.FirstName</td>
                 <td>@s.LastName</td>
                 <td>@s.Email</td>
-                <td>@s.CourseCode</td>
+                <td>
+                    @s.CourseCode
+
+                    @switch (s.CourseCode)
+                        {
+                        case "COMP229":
+                            @: - Web Application Development
+                            break;
+
+                        case "COMP100":
+                            @: - Programming I
+                            break;
+
+                        case "COMP123":
+                            @: - Programming II
+                            break;
+
+                        default:
+                            @: - Other Course
+                            break;
+                     }
+                </td>
                 <td>@s.FullTime</td>
-                <td>@s.Gpa</td>
+                <td>@s.Gpa
+                    @if(s.Gpa >=2)
+                    {
+                        @: - Great GPA
+                    }
+                    else
+                    {
+                        @: - Keep working on your GPA
+                    } 
+                </td>
             </tr>
-        }
+         }
     </tbody>
 </table>
 

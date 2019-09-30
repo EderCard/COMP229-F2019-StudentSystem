@@ -26,7 +26,7 @@ namespace COMP229_F2019_StudentSystem.Controllers
                 {
                     FirstName = "Ederson",
                     LastName = "Cardoso",
-                    CourseCode = "3408",
+                    CourseCode = "COMP229",
                     Email = "edersoncard@gmail.com",
                     FullTime = true,
                     Gpa = 4.0,
@@ -36,7 +36,7 @@ namespace COMP229_F2019_StudentSystem.Controllers
                 {
                     FirstName = "Joe",
                     LastName = "Doe",
-                    CourseCode = "3409",
+                    CourseCode = "COMP100",
                     Email = "joedoe@gmail.com",
                     FullTime = false,
                     Gpa = 3.0,
@@ -46,17 +46,17 @@ namespace COMP229_F2019_StudentSystem.Controllers
                 {
                     FirstName = "Susan",
                     LastName = "Mac",
-                    CourseCode = "3408",
+                    CourseCode = "COMP123",
                     Email = "susanmace@gmail.com",
                     FullTime = true,
-                    Gpa = 3.8,
+                    Gpa = 1.8,
                     StudentId = 30504444
                 },
                 new Student
                 {
                     FirstName = "Richard",
                     LastName = "Dog",
-                    CourseCode = "3408",
+                    CourseCode = "COMP225",
                     Email = "richarddog@gmail.com",
                     FullTime = true,
                     Gpa = 4.2,
