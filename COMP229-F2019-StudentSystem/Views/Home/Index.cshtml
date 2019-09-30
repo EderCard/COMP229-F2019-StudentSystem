@@ -1,0 +1,8 @@
+﻿@model Student
+@{
+    Layout = "_BasicLayout";
+    ViewBag.Title = "Home Page";
+}
+
+<p>Student Name: @Model.FirstName</p>
+<p><a asp-action="ListStudents">List Students</a></p>
