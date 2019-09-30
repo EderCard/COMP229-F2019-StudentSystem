@@ -26,6 +26,7 @@ namespace COMP229_F2019_StudentSystem
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
     }
