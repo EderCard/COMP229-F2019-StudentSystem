@@ -1,0 +1,44 @@
+﻿@model Student
+
+    <tr>
+        <td>@Model.StudentId</td>
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td>@Model.Email</td>
+        <td>
+            @Model.CourseCode
+
+            @switch (Model.CourseCode)
+             {
+                case "COMP229":
+                    @: - Web Application Development
+                    break;
+
+                case "COMP100":
+                    @: - Programming I
+                    break;
+
+                case "COMP123":
+                    @: - Programming II
+                    break;
+
+                default:
+                    @: - Other Course
+                    break;
+             }
+        </td>
+        <td>@Model.FullTime</td>
+        <td>
+            @Model.Gpa
+                @if (Model.Gpa >= 2)
+                 {
+                    @: - Great GPA
+                 }
+                else
+                {
+                    @: - Keep working on your GPA
+                }
+        </td>
+    </tr>
+
+

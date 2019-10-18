@@ -4,61 +4,25 @@
 
 }
 
-<table class="table">
-    <thead>
-        <tr>
-            <td>Student Id</td>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>Email</td>
-            <td>Course</td>
-            <td>FullTime</td>
-            <td>Gpa</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var s in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>@s.StudentId</td>
-                <td>@s.FirstName</td>
-                <td>@s.LastName</td>
-                <td>@s.Email</td>
-                <td>
-                    @s.CourseCode
-
-                    @switch (s.CourseCode)
-                        {
-                        case "COMP229":
-                            @: - Web Application Development
-                            break;
-
-                        case "COMP100":
-                            @: - Programming I
-                            break;
-
-                        case "COMP123":
-                            @: - Programming II
-                            break;
-
-                        default:
-                            @: - Other Course
-                            break;
-                     }
-                </td>
-                <td>@s.FullTime</td>
-                <td>@s.Gpa
-                    @if(s.Gpa >=2)
-                    {
-                        @: - Great GPA
-                    }
-                    else
-                    {
-                        @: - Keep working on your GPA
-                    } 
-                </td>
+                <td>Student Id</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Course</td>
+                <td>FullTime</td>
+                <td>Gpa</td>
             </tr>
-         }
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            @foreach (var s in Model)
+             {
+                 @await Html.PartialAsync("StudentSummary", s)
+             }
+        </tbody>
+
+    </table>
 
